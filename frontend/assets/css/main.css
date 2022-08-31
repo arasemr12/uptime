@@ -1,0 +1,154 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+    *{
+        @apply p-0 m-0 box-border text-white outline-none border-0;
+    }
+
+    html,
+    body,
+    #__nuxt,
+    #__layout{
+        @apply bg-gray-900 w-full h-full;
+    }
+
+    nav{
+        transition-property: border-width;
+        transition-duration: 300ms;
+    }
+
+    main{
+        @apply w-full h-full flex flex-col items-center;
+    }
+
+    main .cont{
+        @apply w-full lg:w-4/5 py-6 px-6;
+    }
+
+    .btn1{
+        @apply py-2 px-4 bg-gray-700 hover:bg-gray-600 transition duration-300 rounded cursor-pointer focus:ring;
+    }
+
+    .btn2{
+        @apply py-2 px-4 bg-blue-700 rounded hover:bg-blue-600 transition duration-300 focus:ring cursor-pointer;
+    }
+
+    .btn3{
+        @apply py-2 px-4 bg-red-700 rounded hover:bg-red-600 transition duration-300 focus:ring cursor-pointer;
+    }
+
+    .sponsor{
+        @apply hover:-translate-y-2 duration-300;
+    }
+
+    .hr{
+        @apply block w-full h-1 bg-gray-500 rounded-full;
+    }
+
+    .feature{
+        @apply w-full lg:w-1/2 border-2 border-gray-800 py-6 px-6 rounded-lg gap-4 flex flex-col;
+    }
+
+    input{
+        @apply py-2 px-4 rounded bg-gray-800 focus:ring transition duration-300;
+    }
+
+    form{
+        @apply w-full flex flex-col items-center gap-10;
+    }
+
+    form div{
+        @apply w-full flex flex-col;
+    }
+
+    form div label{
+        @apply font-bold;
+    }
+
+    .link{
+        @apply text-blue-600 underline;
+    }
+
+    ::-webkit-scrollbar {
+        @apply w-2;
+    }
+    
+    ::-webkit-scrollbar-track {
+        @apply bg-gray-800;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        @apply bg-gray-700;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+        @apply bg-gray-600;
+    }
+
+    .loading{
+        @apply border-t-2 border-l-2 rounded-full border-gray-600 p-4 duration-300;
+        animation: load 1s linear 0s infinite;
+    }
+
+    .err{
+        @apply bg-red-100 text-red-600 py-2 px-4 rounded-full duration-300;
+    }
+
+    .act{
+        @apply py-2 px-4 bg-green-600 rounded;
+        box-shadow: 0px 0px 10px 5px rgb(22 ,163 ,74);
+        animation: act 2s linear 0s infinite;
+    }
+
+    .actt{
+        @apply py-2 px-4 bg-red-600 rounded;
+        box-shadow: 0px 0px 10px 5px rgb(220, 38, 38);
+        animation: actt 2s linear 0s infinite;
+    }
+
+    @keyframes load {
+        0%{
+            transform: rotate(0deg);
+        }
+
+        100%{
+            transform: rotate(360deg);
+        }
+    }
+
+    @keyframes act {
+        0%{
+            background: rgba(22 ,163 ,74, 1);
+            box-shadow: 0px 0px 10px 5px rgb(22 ,163 ,74);
+        }
+
+        50%{
+            background: rgba(22 ,163 ,74, 0.5);
+            box-shadow: 0px 0px 10px 5px rgba(22 ,163 ,74, 0.5);
+        }
+
+        100%{
+            background: rgba(22 ,163 ,74, 1);
+            box-shadow: 0px 0px 10px 5px rgb(22 ,163 ,74);
+        }
+    }
+
+    @keyframes actt {
+        0%{
+            background: rgba(220, 38, 38, 1);
+            box-shadow: 0px 0px 10px 5px rgb(220, 38, 38);
+        }
+
+        50%{
+            background: rgba(220, 38, 38, 0.5);
+            box-shadow: 0px 0px 10px 5px rgba(220, 38, 38, 0.5);
+        }
+
+        100%{
+            background: rgba(220, 38, 38, 1);
+            box-shadow: 0px 0px 10px 5px rgb(220, 38, 38);
+        }
+    }
+}
