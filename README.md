@@ -1,5 +1,5 @@
 # uptime
-Uptime website.
+Uptime monitor.
 
 ## How to run project?
 
